@@ -2,15 +2,147 @@
 
 # Please download the work file on : [Download](https://drive.google.com/file/d/1RQZBup_yby3tJpz7ID5Deb4OuE7IEJjr/view?usp=drive_link)
 
+
 # Weekly Blog 
 
+* [Week 6](#week_6oct3---oct15)
+* [Week 5](#week_5sep18---oct2)
 * [Week 4](#week_4sep5---sep18)
 * [Week 3](#week_3aug22---sep4) 
 * [week 2](#week_2aug7---aug21)
 * [Week 1](#week_1jul10---aug6)
 
 
-## WEEK_4(Sep/5 - Sep/18)
+## Week6(Oct/3 - Oct/15)
+
+## Project View
+![Game view 1](img/../image/Game_view1.PNG)
+![Game View 2](img/../image/Game_vew2.PNG)
+
+## Development Screenshots
+![Overview](img/../image/Sense_1.PNG)
+![Overview](img/../image/Sense_2.PNG)
+![Overview](img/../image/Sense_setup.PNG)
+
+In the development phase, I focused on creating an immersive and interactive environment. The images above showcase the progress made in designing the user interface and setting up the scene. 
+
+
+## Project Achievements
+
+- ✅ **Rough Project Completion**: I successfully completed the project, meeting the initial objectives.
+- ✅ **Interaction Objects**: I implemented interaction objects within the Unity environment to enhance the user experience.
+- ✅ **Switchable Senses**: Users can seamlessly switch between two senses at any time during the experience.
+- ✅ **Completion on Schedule**: I managed to finish the project on time as planned.
+
+## Areas for Improvement
+
+While I achieved the primary objectives of the project, there are some areas where I could have done better:
+
+- ❌ **Time Management**: I could have improved my time management skills to allocate more time to certain aspects of the project.
+- ❌ **Team Collaboration**: In future projects, collaborating with a team could lead to more innovative ideas and efficient execution.
+
+# Code view: 
+<img src="img/../image/camera_change.PNG" alt="Overview" ><br>
+This script in Unity allows for toggling between two cameras in a scene. It features two public camera GameObjects, "mainCamera" and "lunraCamera," and an integer "Manager" to keep track of the currently active camera.
+
+The "ChangeCamera" function triggers a camera-switching animation, providing a smooth transition between the two cameras.
+
+The "ManageCamera" function alternates between the cameras based on the "Manager" value. If "Manager" is 0, it activates "lunraCamera" and sets "Manager" to 1. Otherwise, it activates "mainCamera" and sets "Manager" to 0.
+
+Two helper functions, "Cam_1" and "Cam_2," enable or disable the respective cameras based on their names.
+
+In summary, this script facilitates camera switching in Unity, making it easy to transition between "mainCamera" and "lunraCamera" with a simple function call.
+
+
+
+<img src="img/../image/Gun_code.PNG" alt="Overview" ><br>
+This script in Unity is designed to fire bullets from a designated spawn point when an XR grab interaction is activated. It listens for the "activated" event on the XRGrabInteractable component attached to the GameObject.
+
+When the "activated" event occurs, the "OnActivated" method is called, which in turn triggers the "FireBullet" method. This method instantiates a bullet object at the specified spawn point and gives it an initial velocity in the forward direction. The bullet is then set to self-destruct after 5 seconds.
+
+This script is a fundamental part of implementing interactive shooting mechanics in a Unity XR project, making it possible for users to shoot bullets from a handheld object when they activate it.
+
+
+
+# Feature Plan: 
+This project is currently a work in progress and requires additional development to transform it into a fully polished game. The aim is to add various features to make it a more engaging and playable experience for users. The following requirements and enhancements are planned:
+-  First Person to Third Person View Switch:
+Implement the ability for players to seamlessly switch between first-person and third-person perspectives. This feature enhances gameplay and immersion.
+-  Winning Condition
+Introduce a winning condition or objective that players must achieve to complete the game. For example, surviving for a certain duration, completing specific tasks, or reaching a particular goal.
+- Improved Weapon System
+Enhance the weapon system to provide players with a more satisfying and interactive shooting experience. This may include better weapon handling, varied weapon types, and realistic ballistics.
+- Non-Player Characters (NPCs)
+Introduce non-player characters (NPCs) to the game world to add depth and challenges. NPCs can be allies, enemies, or neutral characters, contributing to a richer gameplay experience.
+- Expanded Control Room Functionality
+Expand the functionality of control rooms within the game. These control rooms may include interactive elements, puzzles, or management tasks that players must engage with to progress through the game.
+## WEEK_5(Sep/18 - Oct/2)
+
+## Current Project update: 
+<img src="img/../image/Overview.PNG" alt="Overview" ><br>
+<img src="img/../image/over_view2.PNG" alt="Overview" ><br>
+### Over view
+<img src="img/../image/game_view.PNG" alt="game_view" ><br>
+### Game view
+
+# What Have I done: 
+- &#x274C; Virtual Objects 
+- &#x2705; Texture feature apply 
+- &#x2705; Skybox Changes 
+- &#x2705; Indoor lighting 
+- &#x2705; Outdoor environment changes  
+- &#x2705; Simulation of weightlessness in space 
+
+- Virtual Objects
+Unfortunately, I had to abandon the virtual objects feature for now. It posed some technical challenges that needed more time to address properly.
+
+- Texture Feature Applied
+I successfully implemented a texture feature that enhances the visual quality of our project. Textures can add depth and realism to our 3D environment.
+
+- Skybox Changes
+Skyboxes play a crucial role in setting the ambiance of our scene. I've made some exciting changes to the skybox, creating different moods and atmospheres.
+
+- Indoor Lighting
+Indoor scenes now have improved lighting. Proper lighting is essential for creating a realistic and immersive environment.
+
+- Outdoor Environment Changes
+The outdoor environment has also seen significant improvements. This includes terrain modifications, vegetation, and better integration with the skybox.
+
+- Simulation of Weightlessness in Space
+One of the highlights of our project is the realistic simulation of weightlessness in space. Objects now float and move as they would in a zero-gravity environment.
+
+# How to create Simulation of weightlessness in space: 
+
+## Code overview: 
+<img src="img/../image/code.PNG" alt="game_view" ><br>
+
+## Code Explanation:
+In the code responsible for simulating weightlessness, we use the following line as the core of the script: `transform.Rotate(_rotation * Time.deltaTime);`
+  - `transform: Represents the transform component of the GameObject, which includes its position, rotation, and scale.`
+  - `Rotate(): A method of the transform component used to apply a rotation.`
+
+## Current plan: 
+### Problems : 
+Despite our progress, we've encountered a couple of challenges:
+- 3D Environment View: When exporting the project to a new environment, we've faced issues with the 3D environment view not displaying correctly. We are actively investigating and working on solutions for this problem.
+- Scale Correction: We've identified that the scale of our objects is currently too large. We plan to re-correct the scale to ensure a more realistic representation.
+
+
+## Coming plan: 
+### Must have: 
+- Landing Space: We are working on implementing a landing space and figuring out how to transition the view from the control room to this landing area. This will also involve changes to the skybox to match the new environment.
+<img src="img/../image/landing.PNG" alt="game_view" ><br>
+
+- Door Opening Animation (Virtual): We're considering adding an animation for the door opening, enhancing the immersive experience. Alternatively, we may implement a one-button transfer mechanism for ease of use.
+### Should Have: 
+- We plan to introduce sound effects to the project to further immerse users. The type of sounds we'll use is still under consideration.
+- Skybox Changes Button: We aim to provide users with the ability to change the skybox through a button interaction, giving them more control over the environment.
+### Could have: 
+- Real Object Alignments: If time allows, we may explore aligning virtual objects with real-world objects for a more seamless integration of the virtual and physical spaces.
+
+In conclusion, our project is progressing well, but we are actively addressing some challenges and planning exciting features to enhance the experience. Stay tuned for further updates!
+
+## WEEK_4(Sep/5 - Sep/17)
 # Coming Weeks plan: 
 ### Must-Have: 
 - Virtual Objects interaction: Create vertical button can be interacted with it.
